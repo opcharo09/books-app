@@ -14,7 +14,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 //  API routes 
-app.use(routes);
+require("./routes/api-routes")(app);
 
 
 mongoose.connect(process.env.MONGODB_URI ||"mongodb://user1:opc1991@ds239936.mlab.com:39936/heroku_2w65rzhq");
